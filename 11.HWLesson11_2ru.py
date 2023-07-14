@@ -80,7 +80,7 @@ def get_pet(pets, pet_id):
 def get_suffix(information):
     string = ""
     age = int(information[0]["Pet's age"])
-    if (age == 1) or (age % 10) == 1:
+    if (age == 1):
         string = "год"
     elif (age > 20) and (age % 10) == 1:
         string = "год"
@@ -103,11 +103,11 @@ def pets_list(pets):
 command = ''
 while command != 'stop':
     print("Выберите и введите одну из нижеследующих команд:")
-    print("create - создать запись в базу данных")
-    print("read - прочитать запись о питомце из базы данных")
-    print("update - обновить информацию о питомце в базе данных")
-    print("delete - удалить информацию о питомце из базы данных")
-    print("stop - остановить выполнение программы")
+    print("create - \t создать запись в базу данных")
+    print("read -  \t прочитать запись о питомце из базы данных")
+    print("update - \t обновить информацию о питомце в базе данных")
+    print("delete - \t удалить информацию о питомце из базы данных")
+    print("stop -  \t остановить выполнение программы")
     command = input()
     if command == 'create':
         pet_id = create(pets, pet_id)
